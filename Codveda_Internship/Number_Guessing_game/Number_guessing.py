@@ -16,7 +16,7 @@ import random
 
 
 class NumberGuessingGame:
-    MAX_ATTEMPTS = 20  # Class-level constant for maximum attempts
+    MAX_ATTEMPTS = 20  
 
     def __init__(self):
         """Initialize the game with a random number and reset attempts."""
@@ -40,7 +40,7 @@ class NumberGuessingGame:
 
                     if guess.lower() == 'exit':
                         print("Exiting the game. Goodbye.")
-                        return  # Exit the entire game
+                        return 
 
                     guess = int(guess)
                     self.attempts += 1
@@ -52,7 +52,7 @@ class NumberGuessingGame:
                     else:
                         print(f"Congratulations. You guessed the number {self.target_number} "
                               f"correctly in {self.attempts} attempts.\n")
-                        break  # User guessed correctly
+                        break  
 
                     if self.attempts == self.MAX_ATTEMPTS:
                         print(f"Game over. The correct number was {self.target_number}.\n")
@@ -60,7 +60,6 @@ class NumberGuessingGame:
                 except ValueError:
                     print("Invalid input. Please enter a number.\n")
 
-            # Ask if the player wants to play again
             play_again = input("Would you like to play again? (yes/no): ").lower()
             if play_again == "yes":
                 self.reset_game()

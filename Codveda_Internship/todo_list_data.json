@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title": "Hello world",
+        "description": "I love python",
+        "due_date": "12/10/25",
+        "status": "pending"
+    }
+]
